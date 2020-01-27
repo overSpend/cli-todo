@@ -1,7 +1,6 @@
 print("Welcome to Python Cli-Todolist!\n\n1. Add todo\n2. View todolist\n3. Delete todo\n")
 chooseMode = input("Enter Number: ")
 print("")
-  
     
 def getLines():
     with open("index.txt", 'r') as readFile:
@@ -16,9 +15,9 @@ def saveTodo(Item):
     setTodoItem = getLines() + ". " + Item + "\n"
     with open("index.txt", 'a') as todoTextFile:
         todoTextFile.write(setTodoItem)
-    afterSomeTodo()
+    afterAddTodo()
     
-def afterSomeTodo():
+def afterAddTodo():
     print("\n\nWhat do you want to next?\n\n1. Add again\n2. View todolist\n3. Delete Todo\n4. Exit\n")
     chooseAfterSomeTodo = input("Enter Number: ")
     print("")
